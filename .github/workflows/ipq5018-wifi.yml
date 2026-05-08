@@ -2,6 +2,12 @@ name: IPQ50XX-WIFI
 
 on:
   workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: true
+        default: 'false'
+        type: boolean
   #schedule:
     #- cron: 0 19 * * *
 
