@@ -1,4 +1,4 @@
-name: IPQ50XX-NOWIFI
+name: IPQ50XX-WIFI
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   FIRMWARE_RELEASE: false
-  FIRMWARE_TAG: IPQ50XX-NOWIFI
+  FIRMWARE_TAG: IPQ50XX-WIFI
   TZ: Asia/Shanghai
 
 jobs:
