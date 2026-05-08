@@ -8,7 +8,7 @@ on:
 env:
   REPO_URL: https://github.com/marchmin/openwrt-6.x-LiBwrt
   REPO_BRANCH: main-nss
-  CONFIG_FILE: configs/ipq5018-wifi.config
+  CONFIG_FILE: configs/ipq5018-nowifi.config
   DIY_SCRIPT: libwrt.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
