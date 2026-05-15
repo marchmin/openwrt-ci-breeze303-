@@ -1,14 +1,13 @@
-name: IPQ50XX-NOWIFI
+name: IPQ50XX-WIFI
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
         required: true
         default: 'false'
         type: boolean
-
 
 env:
   REPO_URL: https://github.com/marchmin/openwrt-6.x-LiBwrt
@@ -19,12 +18,13 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: true
   FIRMWARE_RELEASE: false
-  FIRMWARE_TAG: IPQ50XX-6.12-NOWIFI
+  FIRMWARE_TAG: IPQ50XX-6.12-WIFI
   TZ: Asia/Shanghai
 
 jobs:
   Build:
     runs-on: ubuntu-latest
+
 
     steps:
     - name: Check Server Performance(检查服务器性能)
@@ -152,10 +152,10 @@ jobs:
         cat sha256sums
         echo "VERSION_KERNEL=$(find -type f -name "*.manifest" -exec grep -oP '^kernel - \K.*?(?=~|-\d+-)' {} \;)" >> $GITHUB_ENV
         cp $OPENWRT_PATH/.config build.config
-        # mv -f $OPENWRT_PATH/bin/packages/*/*/*.apk packages
-        # tar -zcf Packages.tar.gz packages
-        # rm -rf packages feeds.buildinfo version.buildinfo
-         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
+        //mv -f $OPENWRT_PATH/bin/packages/*/*/*.apk packages
+        //tar -zcf Packages.tar.gz packages
+        //rm -rf packages feeds.buildinfo version.buildinfo
+        echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
 
     - name: Upload Firmware To Artifact(将固件上传到Artifact)
       if: steps.compile.outputs.status == 'success' && env.FIRMWARE_RELEASE != 'true'
