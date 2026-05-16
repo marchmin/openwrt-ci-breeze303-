@@ -18,7 +18,7 @@ env:
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: true
   FIRMWARE_RELEASE: false
-  FIRMWARE_TAG: IPQ50XX-6.12-WIFI
+  FIRMWARE_TAG: IPQ50XX-nss
   TZ: Asia/Shanghai
 
 jobs:
