@@ -1,4 +1,4 @@
-name: IPQ50XX-WIFI
+name: build IPQ50XX-nss
 
 on:
   workflow_dispatch:
