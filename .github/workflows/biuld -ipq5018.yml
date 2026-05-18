@@ -10,7 +10,7 @@ on:
         type: boolean
 
 env:
-  REPO_URL: https://github.com/marchmin/openwrt-6.x-LiBwrt-202604
+  REPO_URL: https://github.com/marchmin/openwrt-6.x-LiBwrt
   REPO_BRANCH: main-nss
   CONFIG_FILE: configs/ipq5018-nss.config
   DIY_SCRIPT: libwrt.sh
